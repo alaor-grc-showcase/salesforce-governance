@@ -9,9 +9,12 @@
 - [x] Geração e configuração da Chave GPG (`Signing Key`).
 - [x] Teste final: Commit inicial com selo "Verified" enviado via SSH.
 
-## Fase 2: Governança e Times (Em Andamento ⏳)
+## Fase 2: Governança e Times (Concluída ✅)
 
-- [ ] Criar os Times na Organização (`Admin-PAM`, `Aprovador`, `Consultoria`...)
-- [ ] Convidar conta secundária (`Consultoria`).
-- [ ] Atribuir permissões dos Times ao repositório.
-- [ ] Configurar regras de proteção da branch `main`
+- [x] Criação e descrição dos Times (`Developers`, `Approvers`, `Admin-PAM`, etc.).
+- [x] Atribuição das permissões (`Roles`) dos Times ao repositório.
+- [x] Criação das *Labels* personalizadas (Tipo, Status, Prioridade).
+- [x] Configuração das Regras de Proteção da branch `main` (Ruleset).
+- [x] Convidada conta secundária (`Developer`) para a organização.
+- [x] **Teste de Validação:** Logado como `Developer`, o merge foi **bloqueado** (sucesso).
+- [x] **Teste de Aprovação:** Logado como `Approver`, o PR foi revisado e mergeado.
