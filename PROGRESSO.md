@@ -17,6 +17,9 @@
 - [x] Configuração das Regras de Proteção da branch `main` (Ruleset).
 - [x] Convidada conta secundária (`Developer`) para a organização.
 - [x] **Teste de Validação:** Logado como `Developer`, o merge foi **bloqueado** (sucesso).
+<<<<<<< HEAD
+- [x] **Teste de Aprovação:** Logado como `Approver`, o PR foi revisado e mergeado.
+=======
 - [x] **Teste de Aprovação:** Logado como `Approver`, o PR foi revisado e mergeado.
 
 ## Fase 3: Integração de Identidade (Azure AD) (Pendente ⏸️)
@@ -30,10 +33,10 @@
 
 ## Fase 4: Automação e DevSecOps (Em Andamento ⏳)
 
-- [ ] Ativar **Secret Scanning** e **Push Protection** (Segurança de Credenciais).
-- [ ] Configurar **Code Scanning** com CodeQL (Análise Estática de Segurança).
-- [ ] Criar pipeline de CI (`codeql.yml`) via Pull Request.
-- [ ] **Teste de Segurança:** Verificar se o PR é escaneado automaticamente.
+- [x] Ativar **Secret Scanning** e **Push Protection** (Segurança de Credenciais).
+- [x] Configurar **Code Scanning** com CodeQL (Análise Estática de Segurança).
+- [x] Criar pipeline de CI (`codeql.yml`) via Pull Request.
+- [x] **Teste de Segurança:** Verificar se o PR é escaneado automaticamente.
 - [ ] Criar pipeline de CD (Simulação de Deploy) após merge na `main`.
 
 ## Fase 5: Documentação e Showcase (Pendente ⏸️)
@@ -42,3 +45,4 @@
 - [ ] Fazer upload dos prints de validação (Bloqueio, Aprovação, Scan).
 - [ ] Escrever o `README.md` definitivo (Resumo, Fluxo, Tecnologias, Testes).
 - [ ] Revisão final do Portfólio.
+>>>>>>> edb3fb797edf2ad3d2c35d6b35025257892d06f8
