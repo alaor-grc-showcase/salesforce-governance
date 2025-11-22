@@ -22,7 +22,15 @@
 =======
 - [x] **Teste de Aprovação:** Logado como `Approver`, o PR foi revisado e mergeado.
 
-## Fase 3: Integração de Identidade (Azure AD) (Pendente ⏸️)
+## Fase 3: Automação e DevSecOps (Base Concluída ✅)
+
+- [x] Ativar **Secret Scanning** e **Push Protection** (Segurança de Credenciais).
+- [x] Configurar **Code Scanning** com CodeQL (Análise Estática de Segurança).
+- [x] Criar pipeline de CI (`codeql.yml`) via Pull Request.
+- [x] **Teste de Segurança:** Verificar se o PR é escaneado automaticamente.
+- [x] Criar pipeline de CD (Estrutura YAML inicial).
+
+## Fase 4: Integração de Identidade (Azure AD) (Pendente ⏸️)
 
 > **Observação:** A implementação de SAML SSO depende de licenciamento GitHub Enterprise. A viabilidade técnica/financeira será analisada futuramente.
 
@@ -31,18 +39,30 @@
 - [ ] Vincular grupos do Azure AD aos times do GitHub (`Approvers`, `Developers`).
 - [ ] Testar o fluxo de login via SSO.
 
-## Fase 4: Automação e DevSecOps (Em Andamento ⏳)
+## Fase 5: Integração Real com Salesforce (Em Andamento ⏳)
 
+<<<<<<< HEAD
 - [x] Ativar **Secret Scanning** e **Push Protection** (Segurança de Credenciais).
 - [x] Configurar **Code Scanning** com CodeQL (Análise Estática de Segurança).
 - [x] Criar pipeline de CI (`codeql.yml`) via Pull Request.
 - [x] **Teste de Segurança:** Verificar se o PR é escaneado automaticamente.
 - [ ] Criar pipeline de CD (Simulação de Deploy) após merge na `main`.
+=======
+- [ ] Gerar chaves de segurança (OpenSSL) para autenticação JWT.
+- [ ] Criar e configurar *Connected App* na Org Salesforce.
+- [ ] Configurar *Secrets* de produção no GitHub (`SF_USERNAME`, `SF_KEY`).
+- [ ] Atualizar workflow `deploy.yml` para instalar SFDX e autenticar via JWT.
+- [ ] **Teste Final:** Realizar deploy real de um pacote na Org Salesforce.
+>>>>>>> 123f14caa9959f942c367d076ad9021c84475094
 
-## Fase 5: Documentação e Showcase (Pendente ⏸️)
+## Fase 6: Documentação e Showcase (Pendente ⏸️)
 
 - [ ] Criar pasta `docs/images` para evidências.
 - [ ] Fazer upload dos prints de validação (Bloqueio, Aprovação, Scan).
 - [ ] Escrever o `README.md` definitivo (Resumo, Fluxo, Tecnologias, Testes).
+<<<<<<< HEAD
 - [ ] Revisão final do Portfólio.
 >>>>>>> edb3fb797edf2ad3d2c35d6b35025257892d06f8
+=======
+- [ ] Revisão final do Portfólio.
+>>>>>>> 123f14caa9959f942c367d076ad9021c84475094
