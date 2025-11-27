@@ -29,15 +29,15 @@ O projeto sai do tradicional deploy manual e estabelece uma esteira de automaç�
 
 ```mermaid
 graph TD;
-    A[Developer] -->|Commit Assinado (GPG)| B(Branch de Feature);
-    B -->|Pull Request| C{Governança};
-    C -->|CodeQL Scan| D[Análise de Segurança];
-    C -->|Code Review| E[Aprovação Humana];
+    A["Developer"] -->|Commit Assinado GPG| B["Branch de Feature"];
+    B -->|Pull Request| C{"Governança"};
+    C -->|CodeQL Scan| D["Análise de Segurança"];
+    C -->|Code Review| E["Aprovação Humana"];
     D -- Passou --> F;
-    E -- Aprovou --> F[Merge na Main];
-    F -->|Dispara Action| G[GitHub Runner];
-    G -->|Autenticação JWT| H[Salesforce Org];
-    H -->|Deploy| I[Produção];
+    E -- Aprovou --> F["Merge na Main"];
+    F -->|Dispara Action| G["GitHub Runner"];
+    G -->|Autenticação JWT| H["Salesforce Org"];
+    H -->|Deploy| I["Produção"];
 ⚙️ Stack Tecnológica
 Controle de Versão: Git & GitHub
 
