@@ -19,7 +19,7 @@
 - [x] **Teste de Validação:** Logado como `Developer`, o merge foi **bloqueado** (sucesso).
 - [x] **Teste de Aprovação:** Logado como `Approver`, o PR foi revisado e mergeado.
 
-## Fase 3: Automação e DevSecOps (Base Concluída ✅)
+## Fase 3: Automação e DevSecOps (Concluída ✅)
 
 - [x] Ativar **Secret Scanning** e **Push Protection** (Segurança de Credenciais).
 - [x] Configurar **Code Scanning** com CodeQL (Análise Estática de Segurança).
@@ -36,15 +36,25 @@
 - [ ] Vincular grupos do Azure AD aos times do GitHub (`Approvers`, `Developers`).
 - [ ] Testar o fluxo de login via SSO.
 
-## Fase 5: Integração Real com Salesforce (Em Andamento ⏳)
+## Fase 5: Integração Real com Salesforce (Concluída ✅)
 
 - [x] Gerar chaves de segurança (OpenSSL) para autenticação JWT.
 - [x] Criar e configurar *Connected App* na Org Salesforce.
 - [x] Configurar *Secrets* de produção no GitHub (`SF_USERNAME`, `SF_KEY`).
-- [ ] Atualizar workflow `deploy.yml` para instalar SFDX e autenticar via JWT.
-- [ ] **Teste Final:** Realizar deploy real de um pacote na Org Salesforce.
+- [x] Atualizar workflow `deploy.yml` para instalar SFDX e autenticar via JWT.
+- [x] **Teste de Conexão:** Deploy bem-sucedido de classe simples (`OlaMundo`).
 
-## Fase 6: Documentação e Showcase (Pendente ⏸️)
+## Fase 6: Simulação de Projeto Corporativo (Em Andamento ⏳)
+
+> **Objetivo:** Simular o deploy de uma feature complexa (>15 arquivos) envolvendo Front-end (LWC), Back-end (Apex) e Banco de Dados (Objetos), testando a performance da esteira e a cobertura de testes.
+
+- [ ] Criar estrutura de Objetos Customizados (ex: `Projeto__c`, `Tarefa__c`).
+- [ ] Desenvolver Back-end: Controller, Trigger e Handler.
+- [ ] Desenvolver Front-end: Lightning Web Component (LWC) para gestão.
+- [ ] Criar Classes de Teste com cobertura adequada.
+- [ ] **Teste Final:** Deploy do pacote completo via Pull Request e GitHub Actions.
+
+## Fase 7: Documentação e Showcase (Pendente ⏸️)
 
 - [ ] Criar pasta `docs/images` para evidências.
 - [ ] Fazer upload dos prints de validação (Bloqueio, Aprovação, Scan).
