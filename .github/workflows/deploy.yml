@@ -1,37 +1,43 @@
-name: Deploy Simulado (Salesforce)
+name: Deploy Salesforce (Produção)
 
-# Gatilho: Roda apenas quando um PR é mergeado (push) na main
 on:
   push:
     branches: [ "main" ]
 
-# Permissões de segurança
-permissions:
-  contents: read
-
 jobs:
-  deploy-prd:
-    name: Deploy to Production
+  deploy-salesforce:
     runs-on: ubuntu-latest
-    environment: Production
-
     steps:
-      - name: 1. Baixar Código (Checkout)
+      # 1. Baixar o código do repositório
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: 2. Autenticar Pipeline-Runner
-        run: echo "Autenticando conta de serviço (CI-CD-Runner)... [OK]"
+      # 2. Instala o Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: 3. Simular Deploy para SAFULL (QAS)
-        run: |
-          echo "Iniciando deploy para ambiente de Quality Assurance..."
-          echo "Baixando artefatos da branch main..."
-          echo "Upload para ambiente de QAS... [OK]"
-          echo "Rodando testes unitários Apex... [OK]"
-          echo "Deploy em QAS concluído com sucesso."
+      # 3. Instala a CLI do Salesforce
+      - name: Install Salesforce CLI
+        run: npm install @salesforce/cli --global
 
-      - name: 4. Simular Deploy para PRD (Produção)
+      # 4. Cria o arquivo de chave temporário
+      - name: Create JWT Key File
+        run: echo "${{ secrets.SF_PRIVATE_KEY }}" > server.key
+
+      # 5. Autentica no Salesforce usando JWT
+      - name: Authenticate with JWT
         run: |
-          echo "Iniciando deploy para ambiente de PRODUÇÃO..."
-          echo "Validando pacote e dependências... [OK]"
-          echo "Deploy em PRD finalizado!"
+          sf org login jwt \
+            --client-id ${{ secrets.SF_CONSUMER_KEY }} \
+            --username ${{ secrets.SF_USERNAME }} \
+            --jwt-key-file server.key \
+            --set-default-dev-hub \
+            --alias prod-org
+
+      # 6. Faz o Deploy Real
+      - name: Deploy to Production
+        run: |
+          echo "Iniciando deploy real..."
+          sf project deploy start --target-org prod-org --source-dir force-app --wait 10
