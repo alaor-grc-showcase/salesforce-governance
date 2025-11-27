@@ -38,9 +38,9 @@
 
 ## Fase 5: Integração Real com Salesforce (Em Andamento ⏳)
 
-- [ ] Gerar chaves de segurança (OpenSSL) para autenticação JWT.
-- [ ] Criar e configurar *Connected App* na Org Salesforce.
-- [ ] Configurar *Secrets* de produção no GitHub (`SF_USERNAME`, `SF_KEY`).
+- [x] Gerar chaves de segurança (OpenSSL) para autenticação JWT.
+- [x] Criar e configurar *Connected App* na Org Salesforce.
+- [x] Configurar *Secrets* de produção no GitHub (`SF_USERNAME`, `SF_KEY`).
 - [ ] Atualizar workflow `deploy.yml` para instalar SFDX e autenticar via JWT.
 - [ ] **Teste Final:** Realizar deploy real de um pacote na Org Salesforce.
 
