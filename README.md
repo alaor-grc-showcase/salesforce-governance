@@ -38,6 +38,8 @@ graph TD;
     F -->|Dispara Action| G["GitHub Runner"];
     G -->|Autenticação JWT| H["Salesforce Org"];
     H -->|Deploy| I["Produção"];
+'''
+
 ⚙️ Stack Tecnológica
 Controle de Versão: Git & GitHub
 
